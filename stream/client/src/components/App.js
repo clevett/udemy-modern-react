@@ -6,19 +6,22 @@ import StreamEdit from './streams/StreamEdit'
 import StreamList from './streams/StreamList'
 import StreamShow from './streams/StreamShow'
 
+import Header from './Header'
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <h1>Header!</h1>
-      <div>
-        <Route path='/' exact component={StreamList}></Route>
-        <Route path='/streams/new' exact component={StreamCreate}></Route>
-        <Route path='/streams/edit' exact component={StreamEdit}></Route>
-        <Route path='/streams/delete' exact component={StreamDelete}></Route>
-        <Route path='/streams/show' exact component={StreamShow}></Route>
-      </div>
-    </BrowserRouter>
+    <div className='ui container'>
+      <BrowserRouter>
+        <div>
+          <Header />
+          <Route path='/' exact component={StreamList}></Route>
+          <Route path='/streams/new' exact component={StreamCreate}></Route>
+          <Route path='/streams/edit' exact component={StreamEdit}></Route>
+          <Route path='/streams/delete' exact component={StreamDelete}></Route>
+          <Route path='/streams/show' exact component={StreamShow}></Route>
+        </div>
+      </BrowserRouter>
+    </div>
   )
 }
 
