@@ -3,9 +3,6 @@ import React, { useState } from 'react'
 const SearchBar = ({ onFormSubmit }) => {
   const [term, setTerm] = useState('')
 
-  //Defined as an arrow fuction to ensure this is correctly assigned
-  const onInputChange = event => setTerm(event.target.value)
-
   //Stop browser from refreshing when user submits
   const onSubmit = event => {
     event.preventDefault() //call callback from parent component
@@ -22,7 +19,7 @@ const SearchBar = ({ onFormSubmit }) => {
             //Create a Controlled input by assigning the value to state
             value={term}
             //Built in Callback function
-            onChange={onInputChange}
+            onChange={event => setTerm(event.target.value)}
           />
         </div>
       </form>
