@@ -4,7 +4,7 @@ import youtube from '../apis/youtube'
 const useVideos = (defaultSearchTerm) => {
   const [videos, setVideos] = useState([])
 
-  useEffect(() => search(defaultSearchTerm), [])
+  useEffect(() => search(defaultSearchTerm), [defaultSearchTerm])
 
   const search = async term => {
     const KEY = ''; //Add key
