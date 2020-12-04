@@ -1,3 +1,9 @@
 {
-  "streans": []
+  "streams": [
+    {
+      "title": "First Stream",
+      "description": "Please post",
+      "id": 1
+    }
+  ]
 }
